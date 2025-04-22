@@ -24,7 +24,7 @@
                         <a class="nav-link" href="/admin/dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/users">Gestión de Usuarios</a>
+                        <a class="nav-link" href="/admin/students">Gestión de Estudiantes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/courses">Gestión de Cursos</a>

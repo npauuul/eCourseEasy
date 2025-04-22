@@ -2,7 +2,7 @@
     <!-- Navbar Superior -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">eCourseEasy</a>
+            <a class="navbar-brand fw-bold" href="/">eCourseEasy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse px-4" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="/student/dashboard">
                             <i class="bi bi-speedometer2 me-1"></i> Dashboard
                         </a>
                     </li>

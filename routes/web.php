@@ -6,7 +6,9 @@ use App\Http\Controllers\Members;
 use App\Http\Controllers\StudentController;
 use App\Livewire\CourseComponent;
 use App\Livewire\DashComponent;
+use App\Livewire\StudentComponent;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -46,6 +48,6 @@ Route::middleware(['auth:web'])->group(function () {
 // Rutas protegidas para admins
 Route::middleware(['auth:admin'])->group(function () {
     Route::get('/admin/dashboard', DashComponent::class)->name('admin.dashboard');
+    Route::get('/admin/students', StudentComponent::class)->name('admin.students');
     Route::get('/admin/courses', CourseComponent::class)->name('admin.courses');
-    Route::get('/admin/courses/create', [AdminController::class, 'CreateCourseShow'])->name('admin.courses.create');
 });
