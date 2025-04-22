@@ -25,5 +25,4 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
-/vendor
 >>>>>>> 2c8b757 (Build with Laravel (Template))
