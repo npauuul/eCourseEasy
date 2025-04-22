@@ -36,29 +36,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Información de Contacto -->
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-white">
-                        <h5 class="mb-0"><i class="bi bi-envelope me-2"></i>Contacto</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2">
-                                <i class="bi bi-envelope-fill text-primary me-2"></i>
-                                {{ auth()->user()->email }}
-                            </li>
-                            <li class="mb-2">
-                                <i class="bi bi-telephone-fill text-primary me-2"></i>
-                                +51 987 654 321
-                            </li>
-                            <li>
-                                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
-                                Lima, Perú
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
             
             <div class="col-lg-8">
@@ -70,9 +47,9 @@
                     <div class="card-body">
                         <form>
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="firstName" class="form-label">Nombres Completos</label>
-                                    <input type="text" class="form-control" id="firstName" value="Juan">
+                                    <input type="text" class="form-control" id="firstName" value="{{ auth()->user()->name }}">
                                 </div>
                             </div>
                             
@@ -83,28 +60,22 @@
                             
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Teléfono</label>
-                                <input type="tel" class="form-control" id="phone" value="+51 987 654 321">
+                                <input type="tel" class="form-control" id="phone" value="{{ auth()->user()->phone }}">
                             </div>
                             
                             <div class="mb-3">
                                 <label for="address" class="form-label">Dirección</label>
-                                <input type="text" class="form-control" id="address" value="Av. Siempre Viva 123">
+                                <input type="text" class="form-control" id="address" value="{{ auth()->user()->address }}">
                             </div>
                             
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="city" class="form-label">Ciudad</label>
-                                    <input type="text" class="form-control" id="city" value="Lima">
+                                    <input type="text" class="form-control" id="city" value="{{ auth()->user()->city }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="country" class="form-label">País</label>
-                                    <select class="form-select" id="country">
-                                        <option selected>Perú</option>
-                                        <option>Argentina</option>
-                                        <option>Chile</option>
-                                        <option>Colombia</option>
-                                        <option>México</option>
-                                    </select>
+                                    <input type="text" class="form-select" id="country" value="{{ auth()->user()->country }}">
                                 </div>
                             </div>
                             
@@ -130,7 +101,7 @@
                             <div class="mb-3">
                                 <label for="newPassword" class="form-label">Nueva contraseña</label>
                                 <input type="password" class="form-control" id="newPassword">
-                                <div class="form-text">Mínimo 8 caracteres, incluyendo números y símbolos</div>
+                                <div class="form-text">Establece una contraseña segura.</div>
                             </div>
                             
                             <button type="submit" class="btn btn-warning">
