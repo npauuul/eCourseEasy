@@ -43,6 +43,14 @@
           <img src="{{ $course->image }}" class="card-img-top img-fluid w-25 my-4 mx-auto d-block" alt="{{ $course->name }}">
           <h5 class="card-title">{{ $course->name }}</h5>
             <p class="card-text">{{ $course->description }}</p>
+
+            @php
+                $telefono = '51953311306'; 
+                $mensaje = urlencode("Hola, quiero inscribirme al curso de " . $course->name);
+                $whatsappUrl = "https://wa.me/{$telefono}?text={$mensaje}";
+            @endphp
+
+            <a href="{{ $whatsappUrl }}" target="_blank" class="btn btn-success">Inscribirse</a>
           </div>
         </div>
       </div>

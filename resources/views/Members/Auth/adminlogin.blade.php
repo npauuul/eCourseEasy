@@ -22,6 +22,7 @@
             </div>
             <div class="d-grid">
                 <button type="submit" class="btn btn-dark">Login</button>
+                <a href="/login" class="btn btn-warning mt-2">Volver</a>
             </div>
         </form>
     </div>

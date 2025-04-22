@@ -18,13 +18,20 @@
         @foreach ($courses as $course)
             <div class="col">
                 <div class="card h-100">
-                <div class="container-fluid text-center">
-                    <img src="{{ $course->image }}" class="card-img-top img-fluid w-25 my-4" alt="{{ $course->name }}">
-                </div>
-                <div class="card-body">
+                    <div class="container-fluid text-center">
+                        <img src="{{ $course->image }}" class="card-img-top img-fluid w-25 my-4" alt="{{ $course->name }}">
+                    </div>
+                    <div class="card-body">
                         <h5 class="card-title">{{ $course->name }}</h5>
                         <p class="card-text">{{ $course->description }}</p>
-                        <a href="#" class="btn btn-primary">Inscribirse</a>
+
+                        @php
+                            $telefono = '51953311306'; 
+                            $mensaje = urlencode("Hola, quiero inscribirme al curso de " . $course->name);
+                            $whatsappUrl = "https://wa.me/{$telefono}?text={$mensaje}";
+                        @endphp
+
+                        <a href="{{ $whatsappUrl }}" target="_blank" class="btn btn-success">Inscribirse</a>
                     </div>
                 </div>
             </div>
@@ -33,8 +40,6 @@
         </div>
     </div>
     @include('Members.Partials.footer')
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

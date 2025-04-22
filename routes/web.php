@@ -3,9 +3,11 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Members;
+use App\Http\Controllers\StudentController;
 use App\Livewire\CourseComponent;
 use App\Livewire\DashComponent;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -24,6 +26,7 @@ Route::get('/nosotros', [Members::class, 'NosotrosShow' ])->name('nosotros');
 
 // Login estudiantes
 Route::get('login', [AuthController::class, 'LoginShow'])->name('student.login');
+Route::post('logout', [AuthController::class, 'studentLogout'])->name('student.logout');
 Route::post('login', [AuthController::class, 'studentLogin']);
 
 //Register estudiantes 
@@ -36,7 +39,8 @@ Route::post('admin-login', [AuthController::class, 'adminLogin']);
 
 // Rutas protegidas para estudiantes
 Route::middleware(['auth:web'])->group(function () {
-    Route::get('/student/dashboard', [StudentController::class, 'DashShow'])->name('student.dashboard');
+    Route::get('/student/dashboard', [StudentController::class, 'DashShow'])->name('Members.dash');
+    Route::get('/student/profile', [StudentController::class, 'ProfileShow'])->name('Members.profile');
 });
 
 // Rutas protegidas para admins

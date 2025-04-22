@@ -28,11 +28,6 @@
                 <input type="password" class="form-control" id="password" name="password" required placeholder="********">
             </div>
 
-            <div class="mb-3">
-                <label for="password_confirmation" class="form-label">Confirmar contraseña</label>
-                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required placeholder="********">
-            </div>
-
             <div class="d-grid">
                 <button type="submit" class="btn btn-success">Registrarse</button>
             </div>
